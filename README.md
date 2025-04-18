@@ -89,14 +89,14 @@ The model performs well on documents similar to the training dataset and can be 
 
 ```mermaid
 graph TD
-    A[CSV Input (PDF Text)] --> B[Word Occurrence Analysis per Class]
-    B --> C[Filter Rare/Common Words]
-    C --> D[Cleaned Class Wordlists]
-    D --> E[Feature Vector Construction]
-    E --> F[XGBoost MultiOutput Training]
-    F --> G[Model Evaluation]
-    F --> H[Export Trained Model]
-    H --> I[Use for Real-Time Prediction]
+    A["CSV Input (PDF Text)"] --> B["Word Occurrence Analysis per Class"]
+    B --> C["Filter Rare/Common Words"]
+    C --> D["Cleaned Class Wordlists"]
+    D --> E["Feature Vector Construction"]
+    E --> F["XGBoost MultiOutput Training"]
+    F --> G["Model Evaluation"]
+    F --> H["Export Trained Model"]
+    H --> I["Use for Real-Time Prediction"]
 ```
 
 ---
