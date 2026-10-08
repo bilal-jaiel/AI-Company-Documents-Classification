@@ -53,8 +53,8 @@ The full pipeline is in [`notebooks/main.ipynb`](notebooks/main.ipynb), committe
 | Step | Details |
 |---|---|
 | 1. Occurrence tables | Lower-case tokenisation; for each class and each word, total frequency and number of documents containing it |
-| 2. Rare words | A word is dropped unless it appears in at least 10 % of the documents of some class (2,998 words removed) |
-| 3. Common words | A word is dropped if it appears in all four classes with document counts within ± 20 % of each other, so it does not discriminate (78 words removed) |
+| 2. Rare words | A word is dropped unless it appears in more than 10 % of the documents of some class (2,998 words removed) |
+| 3. Common words | A word is dropped if it appears in all four classes with document counts within ± 20 % of its count in the invoice class, so it does not discriminate (78 words removed) |
 | 4. Features | The top 800 remaining words of each class are merged into a 212-word vocabulary; each document becomes a vector of word counts plus its length |
 | 5. Model | `MultiOutputClassifier(XGBClassifier)`, one binary output per class, trained on 80 % of the documents (random split, seed 42) |
 | 6. Inference | A helper vectorises any new text with the same vocabulary and returns the predicted type |
