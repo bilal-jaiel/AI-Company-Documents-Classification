@@ -1,0 +1,11 @@
+# Generated files (occurrence tables, training set, trained model)
+outputs/
+*.pkl
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+.vscode/
+.idea/
