@@ -10,6 +10,10 @@ with a hand-built class-aware vocabulary and an XGBoost classifier.
 ![XGBoost](https://img.shields.io/badge/XGBoost-classifier-EB5E28)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
 
+<img src="docs/distinctive_words.png" width="70%" alt="Share of documents containing the most distinctive words of each class">
+
+<sub>Each class has words found in all of its documents and in none of the others, which explains the perfect test score.</sub>
+
 </div>
 
 <br>
@@ -82,6 +86,8 @@ The notebook writes the occurrence tables, the training matrix and the trained m
 │   └── company-document-text.csv   Kaggle dataset (text, label, word_count)
 ├── notebooks/
 │   └── main.ipynb                  full pipeline, executed, with outputs
+├── docs/
+│   └── distinctive_words.png       figure at the top of this README
 └── requirements.txt
 ```
 
